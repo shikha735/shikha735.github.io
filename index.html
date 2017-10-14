@@ -120,9 +120,6 @@
 					<div class="agileaboutaits-image-1">
 						<img src="images/about-1.jpg" alt="Couture">
 					</div>
-					<div class="agileaboutaits-image-2">
-						<img src="images/about-2.jpg" alt="Couture">
-					</div>
 					<div class="clearfix"></div>
 				</div>
 				<div class="clearfix"></div>
@@ -746,12 +743,12 @@
 			<h3>Book Your Project</h3>
 
 			<div class="booking-form-aits">
-				<form action="#" method="post">
-					<input type="text" class="margin-right" Name="Name" placeholder="NAME" required="">
-					<input type="email" Name="Email" placeholder="EMAIL" required="">
-					<input type="text" class="margin-right" Name="Phone Number" placeholder="PHONE NUMBER" required="">
-					<input type="text" Name="Place" placeholder="PLACE" required="">
-					<textarea name="Message" placeholder="PROJECT DETAILS" required></textarea>
+				<form action="https://script.google.com/macros/s/AKfycbxvYqeGhZXYaHbcWukRwOgHTY2m7YMSLTygw45EG-jtSyPjhro/exec" id="gform" method="post">
+  					<input type="text" class="margin-right" Name="name" placeholder="NAME" required="">
+					<input type="email" Name="email" placeholder="EMAIL" required="">
+					<input type="text" class="margin-right" Name="phone" placeholder="PHONE NUMBER" required="">
+					<input type="text" Name="place" placeholder="PLACE" required="">
+					<textarea name="message" placeholder="PROJECT DETAILS" required></textarea>
 					<div class="send-button agileits w3layouts">
 						<button class="btn btn-primary">SEND MESSAGE<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
 					</div>
@@ -983,7 +980,9 @@
 
 	<!-- //Custom-JavaScript-File-Links -->
 
-
+<!-- Contact form handling java script -->
+<script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"> </script>
+<!-- End of contact form handling java script -->
 
 </body>
 <!-- //Body -->
