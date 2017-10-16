@@ -76,7 +76,9 @@ a:focus, a:hover {
 /*-- //Reset-Code --*/
 
 
-
+.custom{
+  margin-bottom:10px;
+}
 
 
 /*-- Index-Page-Styling --*/
