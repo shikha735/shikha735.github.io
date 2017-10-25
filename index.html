@@ -200,7 +200,7 @@ As an IT grad, I am enthusiastic about using technology for social good and stre
 
 			<h2>What I do</h2>
 			<div class="grid cs-style-3">
-				<div class="col-md-4 col-sm-4 w3threespecialityw3ls-grid grid1">
+				<div class="col-md-4 col-sm-4 w3threespecialityw3ls-grid grid1" id="modelTrigger1">
 					<figure>
 						<div class="w3threespecialityw3ls-info">
 							<img src="images/special-1.jpg" alt="Couture">
@@ -210,6 +210,18 @@ As an IT grad, I am enthusiastic about using technology for social good and stre
 						</figcaption>
 					</figure>
 				</div>
+
+				<!-- The Modal -->
+				<div id="modal1" class="myModal">
+
+				  <!-- Modal content -->
+				  <div class="myModal-content">
+				    <span class="modalClose">&times;</span>
+				    <p>Some text in the Modal..</p>
+				  </div>
+
+				</div>
+
 				<div class="col-md-4 col-sm-4 w3threespecialityw3ls-grid grid2">
 					<figure>
 						<div class="w3threespecialityw3ls-info">
@@ -946,6 +958,37 @@ As an IT grad, I am enthusiastic about using technology for social good and stre
 <!-- Contact form handling java script -->
 <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"> </script>
 <!-- End of contact form handling java script -->
+
+<script type="text/javascript">
+
+// Get the modal
+var modal1 = document.getElementById('modal1');
+
+// Get the button that opens the modal
+var btn = document.getElementById("modelTrigger1");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("modalClose")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+    modal1.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal1.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+}
+
+</script>
+
 
 </body>
 <!-- //Body -->
