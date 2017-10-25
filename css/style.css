@@ -116,6 +116,7 @@ a:focus, a:hover {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -126,12 +127,30 @@ a:focus, a:hover {
 }
 
 .myModal-content{
+	position: relative;
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    margin: auto;
+    padding: 0;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
 }
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {right:-300px; opacity:0} 
+    to {right:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {right:-300px; opacity:0}
+    to {right:0; opacity:1}
+}
+
 
 /* The Close Button */
 .modalClose {
@@ -148,7 +167,19 @@ a:focus, a:hover {
     cursor: pointer;
 }
 
+.myModal-header {
+    padding: 2px 16px;
+    background-color: #009688;
+    color: white;
+}
 
+.myModal-body {padding: 2px 16px;}
+
+.myModal-footer {
+    padding: 2px 16px;
+    background-color: #009688;
+    color: white;
+}
 
 /*-- Navigation --*/
 
