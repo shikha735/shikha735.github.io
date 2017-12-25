@@ -14,10 +14,12 @@
 <!-- //Meta-Tags -->
 
 <!-- Custom-Stylesheet-Links -->
+<!--Import materialize.css--> <link type="text/css" rel="stylesheet" href="css/my-materialize.css"  media="screen,projection"/>
 <!-- Bootstrap-CSS -->  <link rel="stylesheet" href="css/bootstrap.min.css" 		 type="text/css" media="all">
 <!-- Insex-Page.CSS --> <link rel="stylesheet" href="css/style.css" 				 type="text/css" media="all">
 <!-- Slider-CSS --> 	<link rel="stylesheet" href="css/camera.css" id="camera-css" type="text/css" media="all">
 <!-- Portfolio-CSS -->	<link rel="stylesheet" href="css/swipebox.css"				 type="text/css" media="all">
+<!--Import Google Icon Font--> <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!-- //Custom-Stylesheet-Links -->
 
 <!-- Fonts -->
@@ -86,33 +88,86 @@
 
 	<div id="main-portfolio" style="margin-top: 6%; margin-bottom: 5%">
 		<div class="heading" >
-			<h1>Portfolio</h1>
+			<h1>Shikha Sharma</h1>
 			<hr>
 		</div>
 		<div class="container">
 			<div class="row">
 			<br>
-				<div class="col-md-7">
+				Like everyone else, I have to lot to tell about myself. Here are the most important things about me. You can also <a href="https://www.google.co.in/search?q=shikha735" target="_blank">Google Me</a> to <!--or <a class="scroll" href="index.html#social">-->find out</a> more about me via web.<br><br>
+				<h3>Education</h3><br>
+
+				<div class="table-responsive-vertical shadow-z-1">
+					<!-- Table starts here -->
+						<table id="table" class="table table-hover table-mc-light-blue">
+						<tbody>
+						<tr>
+				          <!--<td data-title="ID">1</td>-->
+				          <td data-title="Name">Bachelor of Technology in Information Technology <br>
+				          	<a href="http://www.gnits.ac.in" target="_blank">G. Narayanamma Institute Of Technology and Science, Hyderabad</a>
+				          </td>
+				          <td data-title="Status">(2013 - 2017)</td>
+				        </tr>
+				        <tr>
+				          <td data-title="Name">Intermediate <br>
+				          	<a href="http://srichaitanya.net/" target="_blank">Sri Chaitanya Junior Kalasala, Hyderabad</a>
+				          </td>
+				          <td data-title="Status">(2011 - 2013)</td>
+				        </tr>
+				        <tr>
+				          <td data-title="Name">SSC <br>
+				          	<a href="http://www.trivenitalentschools.com/" target="_blank">Triveni Talent School, Hyderabad</a>
+				          </td>
+				          <td data-title="Status">(2010 - 2011)</td>
+				        </tr>
+				    </tbody>
+				    </table>
+				</div>
+
+				<h3>Hobbies</h3><br>
+				I enjoy spending my free time riding my bike, playing guitar, and graphic designing.<br><br><br>
+				<h3>I am inspired by</h3><br>
+				- Gary Vaynerchuk<br>
+				- Ankur Warikoo<br>
+				- PV Sindhu<br><br>
+				<h3>Books I've read recently</h3><br>
+				<div class="carousel">
+				    <a class="carousel-item" href="#one!"><img src="images/book-1.jpg"></a>
+				    <a class="carousel-item" href="#two!"><img src="images/book-2.jpg"></a>
+				    <a class="carousel-item" href="#three!"><img src="images/book-3.jpg"></a>
+				    <a class="carousel-item" href="#four!"><img src="images/book-4.jpg"></a>
+				    <a class="carousel-item" href="#five!"><img src="images/book-5.jpg"></a>
+				</div>
+									<!--- If God was a banker<br>
+									- Elon Musk: How the Billionaire CEO of Spacex and Tesla is Shaping Our Future<br>
+									- An Intelligent Invetor<br>
+									- How to Win Friends and Influence People by Dale Carnegie<br>--><br>
+				<!--<div class="col-md-7">
 					<div class="videoWrapper">
-						<iframe width="854" height="480"  style="padding-top:5%" src="https://www.youtube.com/embed/CCphFVn61H8" frameborder="0" allowfullscreen></iframe>
+					<iframe width="854" height="480"  style="padding-top:5%" src="https://www.youtube.com/embed/RWGQKk-rNgQ" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
 				<div class="col-md-5">
-				    <h2 style="padding-top:10px">Audio Spectrum</h2>
-					<i class="fa fa-tag"></i> Video editing, Animation
+				    <h2 style="padding-top:5px">KonQr 3D</h2>
+					<i class="fa fa-tag"></i> Game Design &amp; development, Artificial Intelligence
 					<div class="separator"></div>
 					<hr>
 					<h3 style="text-align:left">Description</h3><br>
-					<p>A simple circular Audio Spectrum that features a dynamic visualizer in the form of waves that react to the music. </p>
+					<p>A single player, 3D shooter-game with multiple levels. There are multiple enemies and one fighter equipped with weapons battling to conquer the premises and unlock the treasure.</p>
 					<div class="separator"></div>
 					<hr>
 					<h3 style="text-align:left">Skills</h3><br>
 					<p>
-					<ul>
-						<li> Software: Adobe Premiere Pro, Adobe After Effects</li>
+					<ul style="margin-left:20px">
+						<li> Programming: C#, Javascript</li>
+						<li> Game engine: Unity 3D</li>
 					</ul>
 					</p>
-				</div>
+					<div class="separator"></div>
+					<hr>
+					<h3 style="text-align:left">Project link</h3><br>
+					<p><a href="https://github.com/shikha735/KonQr3D" target="_blank">KonQr 3D</a><br></p>
+				</div>-->
 			</div>
 		</div>
 	</div>
@@ -314,6 +369,15 @@
 			</script>
 		<!-- //Stats-Number-Scroller-Animation-JavaScript -->
 
+		<!-- Book carousel -->
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+	    <script type="text/javascript">
+	    	$(document).ready(function(){
+		      $('.carousel').carousel();
+		    });
+	        
+	    </script>
+    	<!-- // Book carousel -->
 		<!-- Gallery-Tab-JavaScript -->
 			<script src="js/cbpFWTabs.js"></script>
 			<script>

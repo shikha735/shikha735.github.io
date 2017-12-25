@@ -18,6 +18,7 @@
 <!-- Insex-Page.CSS --> <link rel="stylesheet" href="css/style.css" 				 type="text/css" media="all">
 <!-- Slider-CSS --> 	<link rel="stylesheet" href="css/camera.css" id="camera-css" type="text/css" media="all">
 <!-- Portfolio-CSS -->	<link rel="stylesheet" href="css/swipebox.css"				 type="text/css" media="all">
+<!-- Experience Modals --> <link rel="stylesheet" type="text/css" href="css/component.css" />
 <!-- //Custom-Stylesheet-Links -->
 
 <!-- Fonts -->
@@ -44,7 +45,7 @@
 <!-- Body -->
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-
+<div id="md-overlay" onclick="off()"></div><!-- the overlay element for experience modal -->
 
 	<!-- Header -->
 	<div class="agileheaderw3ls" id="agilehomewthree">
@@ -169,16 +170,19 @@ As an IT grad, I am enthusiastic about using technology for social good and stre
 									</div>
 
 									<h3>Hobbies</h3><br>
-									I enjoy spending my free time riding my bike, graphic designing and listening music.<br><br><br>
+									I enjoy spending my free time riding my bike, playing guitar, and graphic designing.<br><br><br>
 									<h3>I am inspired by</h3><br>
+									- Gary Vaynerchuk<br>
 									- Ankur Warikoo<br>
-									- PV Sindhu<br>
-									- Gary Vaynerchuk<br><br>
+									- PV Sindhu<br><br>
 									<h3>Books I've read recently</h3><br>
 									- If God was a banker<br>
 									- Elon Musk: How the Billionaire CEO of Spacex and Tesla is Shaping Our Future<br>
 									- An Intelligent Invetor<br>
 									- How to Win Friends and Influence People by Dale Carnegie<br><br>
+								</div>
+								<div class="modal-footer">
+									<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
 								</div>
 							</div>
 						</div>
@@ -254,7 +258,7 @@ As an IT grad, I am enthusiastic about using technology for social good and stre
 				    </div>
 				    <div class="myModal-body"  style="padding:1em; text-align:left;">
 				      <p><b>Software</b>: I use Adobe Photoshop, and Adobe Illustrator for graphic designing.<br>
-				      Here are the sample projects: <a href="index.html#design">Design</a> (Click on design tab in portfolio)
+				      Here are the sample designs: <a href="#design">Design</a> (Click on design tab in portfolio)
 				    </div>
 				    <div class="myModal-footer">
 				      <h3></h3>
@@ -413,48 +417,129 @@ As an IT grad, I am enthusiastic about using technology for social good and stre
 			<!--<h2 style="text-align: left; font-size: 40px; font-family: 'Montserrat', sans-serif; font-weight: 500; margin-left:8%;">Experience</h2>-->
 			<h3>Experience</h3>
 				<!-- Tab-1 -->
+                <script type="text/javascript">
+                	 function on() {
+					    document.getElementById("md-overlay").style.display = "block";
+					}
+
+					function off() {
+					    document.getElementById("md-overlay").style.display = "none";
+					}
+                </script>
 				<section class="agileits w3layouts">
 					<h4> </h4>
 					<div class="gallery-grids">
 						<div class="col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1 custom gallery-top">
-							<a href="images/experience-1.jpg" class="swipebox">
+							<button class="md-trigger" data-modal="exp-modal-1" onclick="on()" style="background-color: Transparent; border: none; padding: 0px;">
 								<figure class="effect-bubba">
 									<img src="images/experience-1.jpg" alt="" class="img-responsive">
 									<figcaption>
 										<h4>University Outreach Programme</h4>
 									</figcaption>
 								</figure>
-							</a>
+							</button>
 						</div>
+
+						<div class="md-modal md-effect-1" id="exp-modal-1">
+						    <div class="md-content">
+						        <h3>JPMorgan Chase &amp; Co.</h3>
+						        
+						        <div style="text-align: left;">
+						        	<strong> University Outreach Programme </strong> (Jan 2017 – June 2017)
+
+						            <ul>
+						                <li>Developed a web application to detect credit card frauds by applying rules on the transactions</li>
+						                <li>Automated the process of transaction retrieval, fraud detection, push notification</li>
+						                <li>Developed an alternative solution: A neural network algorithm in Python to detect credit card frauds</li>
+						            </ul>
+						            <b>Technologies used:</b> PHP, MySQL, Python, HTML, CSS, JS, Bootstrap
+						            <br><br>
+						            <button class="btn btn-default md-close" onclick="off()">Close me!</button> 
+						        </div>
+						    </div>
+						</div>
+
 						<div class="col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1 custom gallery-top">
-							<a href="images/experience-2.jpg" class="swipebox">
+							<button class="md-trigger" data-modal="exp-modal-2" onclick="on()" style="background-color: Transparent; border: none; padding: 0px;">
 								<figure class="effect-bubba">
 									<img src="images/experience-2.jpg" alt="" class="img-responsive">
 									<figcaption>
 										<h4>Summer Research Intern</h4>
 									</figcaption>
 								</figure>
-							</a>
+							</button>
 						</div>
+
+						<div class="md-modal md-effect-1" id="exp-modal-2">
+						    <div class="md-content">
+						        <h3>IIIT - Hyderabad</h3>
+						        <div style="text-align: left;">
+						        	<strong>Summer Research Intern</strong> (May 2015 – July 2015)
+
+						            <ul>
+						                <li>Worked on Anusaaraka, a Natural Language Processing (NLP) Research and Development project - a machine translation system.</li>
+						                <li>Analyzed the layered output and classified the data into categories</li>
+						                <li>Did sentence alignment, word alignment and evaluated the machine (Anusaaraka) translated sentences.</li>
+						                <li>Generated parallel corpus of NCERT books using ‘Champollion’ software.</li>
+						                <li>Text extraction and noise removal from data in various files</li>
+						                <li>Worked on enhancing the loading speed of output files generated by Anusaaraka.</li>
+						            </ul>
+						            <button class="btn btn-default md-close" onclick="off()">Close me!</button> 
+						        </div>
+						    </div>
+						</div>
+
 						<div class="col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1 custom gallery-top">
-							<a href="images/experience-3.jpg" class="swipebox">
+							<button class="md-trigger" data-modal="exp-modal-3" onclick="on()" style="background-color: Transparent; border: none; padding: 0px;">
 								<figure class="effect-bubba">
 									<img src="images/experience-3.jpg" alt="" class="img-responsive">
 									<figcaption>
 										<h4>Game Developer Intern</h4>
 									</figcaption>
 								</figure>
-							</a>
+							</button>
 						</div>
+
+						<div class="md-modal md-effect-1" id="exp-modal-3">
+						    <div class="md-content">
+						        <h3>Fortuity Infotech.</h3>
+						        <div style="text-align: left;">
+						        	<strong>Game Developer Intern</strong> (Jan 2015 – Mar 2015)
+
+						            <ul>
+						                <li>Learned the concepts of game development such as Masking, Texturing etc. and developed a 2D game, Pong in a cross-platform language, Haxe using various libraries like Away3D, Actuate, Flixel, Lime, and OpenFL.</li>
+						                <li>Developed a collision detection algorithm.</li>
+						                <li>Established mathematical formulas and equation for variable speed.</li>
+						            </ul>
+						            <button class="btn btn-default md-close" onclick="off()">Close me!</button> 
+						        </div>
+						    </div>
+						</div>
+
 						<div class="col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1 custom gallery-top">
-							<a href="images/experience-4.jpg" class="swipebox">
+							<button class="md-trigger" data-modal="exp-modal-4" onclick="on()" style="background-color: Transparent; border: none; padding: 0px;">
 								<figure class="effect-bubba">
 									<img src="images/experience-4.jpg" alt="" class="img-responsive">
 									<figcaption>
 										<h4>Tester</h4>
 									</figcaption>
 								</figure>
-							</a>
+							</button>
+						</div>
+
+						<div class="md-modal md-effect-1" id="exp-modal-4">
+						    <div class="md-content">
+						        <h3>Misplaced Minds</h3>
+						        <div style="text-align: left;">
+						        	<strong>Tester</strong> (Dec 2016)
+
+						            <ul>
+						                <li>Tested the android game 2krun across various platforms.</li>
+						                <li>Organised the launch of 2k Run game</li>
+						            </ul>
+						            <button class="btn btn-default md-close" onclick="off()">Close me!</button> 
+						        </div>
+						    </div>
 						</div>
 						
 						<div class="clearfix"></div>
@@ -974,8 +1059,12 @@ As an IT grad, I am enthusiastic about using technology for social good and stre
 	<!-- //Footer -->
 
 
-
 	<!-- Custom-JavaScript-File-Links -->
+
+		<!-- Experience Modals -->
+		<script src="js/classie.js"></script>
+		<script src="js/modalEffects.js"></script>
+		<!-- //Experience Modals -->
 
 		<!-- Default-JavaScript -->   <script type="text/javascript" src="js/jquery.min.js"></script>
 		<!-- Bootstrap-JavaScript --> <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -1167,7 +1256,6 @@ window.onclick = function(event) {
 }
 
 </script>
-
 
 </body>
 <!-- //Body -->
