@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gift</title>
+	<style type="text/css">
+
+
+		html,
+		body {
+		    margin: 0;
+		    padding: 0;
+		    width: 100%;
+		    height: 100vh;
+		    display: flex;
+		    flex-direction: row;
+		    justify-content: center;
+		    align-items: center;
+		    background: #000;
+		}
+
+		.glow-on-hover {
+		    width: 220px;
+		    height: 50px;
+		    border: none;
+		    outline: none;
+		    color: #fff;
+		    background: #111;
+		    cursor: pointer;
+		    position: relative;
+		    z-index: 0;
+		    border-radius: 10px;
+		}
+
+		.glow-on-hover:before {
+		    content: '';
+		    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+		    position: absolute;
+		    top: -2px;
+		    left:-2px;
+		    background-size: 400%;
+		    z-index: -1;
+		    filter: blur(5px);
+		    width: calc(100% + 4px);
+		    height: calc(100% + 4px);
+		    animation: glowing 20s linear infinite;
+		    opacity: 0;
+		    transition: opacity .3s ease-in-out;
+		    border-radius: 10px;
+		}
+
+		.glow-on-hover:active {
+		    color: #000
+		}
+
+		.glow-on-hover:active:after {
+		    background: transparent;
+		}
+
+		.glow-on-hover:hover:before {
+		    opacity: 1;
+		}
+
+		.glow-on-hover:after {
+		    z-index: -1;
+		    content: '';
+		    position: absolute;
+		    width: 100%;
+		    height: 100%;
+		    background: #111;
+		    left: 0;
+		    top: 0;
+		    border-radius: 10px;
+		}
+
+		@keyframes glowing {
+		    0% { background-position: 0 0; }
+		    50% { background-position: 400% 0; }
+		    100% { background-position: 0 0; }
+		}
+
+
+		* {
+			box-sizing: border-box;
+		}
+
+		.box-container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+
+		.box-container .box {
+			margin-bottom: 30px;
+			display: inline-block;
+			position: relative;
+		}
+
+		.box-container .box input {
+			padding: 5px 10px;
+			height: 45px;
+			font-size: 1em;
+			line-height: 45px;
+			border: 2px solid #ccc;
+			width: 400px;
+			outline: none;
+			background: #fff;
+			color: #a2a5a7;
+		}
+
+		.box-container .box input:focus + span {
+			width: 100%;
+			opacity: 1;
+			transform: translateX(0);
+		}
+
+		.box-container .box input:focus + span:before {
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+
+		.box-container .box input:focus + span:after {
+			bottom: 0;
+			left: 0;
+			width: 100%;
+		}
+
+		.box-container .box input + span {
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-left: 2px solid #0099ef;
+			border-right: 2px solid #0099ef;
+			width: calc(100% + 100px);
+			transform: translateX(-50px);
+			height: 100%;
+			pointer-events: none;
+			opacity: 0;
+			transition-property: opacity, width;
+			transition: .3s ease-out;
+		}
+
+		.box-container .box input + span:before, .box-container .box input + span:after {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			left: 25px;
+			transition-property: top, bottom;
+			transition: .3s ease-out;
+			height: 2px;
+			width: calc(100% - 50px);
+			background: #0099ef;
+		}
+
+		.box-container .box input + span:before {
+			top: -30px;
+		}
+
+		.box-container .box input + span:after {
+			bottom: -30px;
+		}
+		
+
+
+	</style>
+</head>
+
+<body>
+	
+	<div class="box-container">
+			<p id="msg" style="color: white; font-size:2em"></p>
+		  <div class="box">
+		    <input type="text" id="key" placeholder="Enter the key" />
+		    <span></span>
+		  </div>
+		  <br/>
+		  <br/>
+		  <button class="glow-on-hover" type="button" onclick="checkKey()">Click Me</button><br/><br/>
+		  <p id="err" style="color: white; font-size:2em"></p>
+		
+
+		</div>
+
+	<script type="text/javascript">
+		var i = 0;
+		var txt = 'Hello Veena! Here is your birthday gift! '; /* The text */
+		var speed = 50; /* The speed/duration of the effect in milliseconds */
+		var passcode = document.getElementById("key");
+		typeWriter();
+
+		function typeWriter() {
+		  if (i < txt.length) {
+		    document.getElementById("msg").innerHTML += txt.charAt(i);
+		    i++;
+		    setTimeout(typeWriter, speed);
+		  }
+		}
+
+		function checkKey(){
+			document.getElementById("err").innerHTML = "";
+			if(passcode.value == "panipuri123"){
+				 window.location.href = "game.html";
+			}
+			else{
+				document.getElementById("err").innerHTML += 'Please enter the correct key';
+			}
+		}
+	</script>
+	
+</body>
+</html>
+
+
