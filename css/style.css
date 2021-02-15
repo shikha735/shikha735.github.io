@@ -113,6 +113,14 @@ a:focus, a:hover {
   text-align: left; 
 }
 
+.bg-text a:hover {
+	color: #000000;
+}
+
+.bg-text button {
+	background-color: #009688;
+}
+
 .bg-text h1 {
 
 }
@@ -1388,6 +1396,8 @@ address {
 	line-height: 25px;
 	color: #CCC;
 }
+
+
 
 .footer-grid-1 p {
 	font-size: 13px;
