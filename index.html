@@ -37,6 +37,8 @@
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+</style>
+
 </head>
 <!-- //Head -->
 
@@ -48,7 +50,7 @@
 <div id="md-overlay" onclick="off()"></div><!-- the overlay element for experience modal -->
 
 	<!-- Header -->
-	<div class="agileheaderw3ls" id="agilehomewthree">
+	<!-- <div class="" id="webhome"> -->
 
 		<!-- Navigation -->
 		<section class="cd-section">
@@ -57,7 +59,7 @@
 		<div class="cd-bouncy-nav-modal">
 			<nav>
 				<ul class="cd-bouncy-nav">
-					<li><a class="scroll" href="#agilehomewthree">HOME</a></li>
+					<li><a class="scroll" href="#webhome">HOME</a></li>
 					<li><a class="scroll" href="#agileaboutaitsabout">ABOUT</a></li>
 					<li><a class="scroll" href="#w3threespecialityw3ls">WORK</a></li>
 					<li><a class="scroll" href="#skills">SKILLS</a></li>
@@ -67,41 +69,37 @@
 			</nav>
 			<a href="#0" class="cd-close">Close modal</a>
 		</div>
+	<!-- </div> -->
 		<!-- //Navigation -->
-
+	
 		<!-- Slider -->
-		<div class="w3slideraits">
-			<div class="camera_wrap w3layouts agileits camera_magenta_skin" id="camera_wrap_2">
-				<div data-src="images/slide-1.jpg" class="w3layouts agileits">
-					<div class="camera_caption w3layouts agileits fadeFromBottom">
-						<h3 class="w3layouts agileits">Hello, I am Shikha Sharma.</h3>
-					</div>
+		<div class="w3layouts agileits" id="webhome">
+			
+			<div class="box" style="position:relative">
+				<div class="bg-image" style="background-size: cover; background-size: 100% 100%; background-attachment: fixed;">
+					 <img class="img-responsive" src="images/Shikha_working_pic.png" /> 
+					<div class="bg-layer"></div>
 				</div>
-				<div class="w3layouts agileits" data-src="images/slide-2.jpg">
-					<div class="camera_caption w3layouts agileits fadeFromBottom">
-						<h3 class="w3layouts agileits">I am a software engineer</h3>
-					</div>
-				</div>
-				<div data-src="images/slide-3.jpg" class="w3layouts agileits">
-					<div class="camera_caption w3layouts agileits fadeFromBottom">
-						<h3 class="w3layouts agileits">I convert caffeine into code</h3>
-					</div>
-				</div>
-				<div class="w3layouts agileits" data-src="images/slide-4.jpg">
-					<div class="camera_caption w3layouts agileits fadeFromBottom">
-						<h3 class="w3layouts agileits">A full-time dreamer!</h3>
-					</div>
-				</div>
-				<div data-src="images/slide-5.jpg" class="w3layouts agileits">
-					<div class="camera_caption w3layouts agileits fadeFromBottom">
-						<h3 class="w3layouts agileits">Check Out My <a class="scroll" href="#portfolio">Portfolio</a> Below</h3>
+				<div class="bg-text w3layouts agileits">
+					<h3 style="font-size:clamp(10px, 2vw, 30px); font-weight: 450; position: relative; text-align: left;">Hi, I am</h3>
+					<h1 class="" style="font-size:clamp(23px, 4vw, 80px); font-weight: 550; position: relative; text-align: left; line-height: 1.5">Shikha Sharma.</h1>
+					<h2 class="" style="font-size:clamp(15px, 3vw, 60px); font-weight: 500; text-align: left; line-height: 1.5; padding-bottom: clamp(1rem, 2vw, 3rem);">
+					<span id="nametag">I</span>
+					</h2>
+					<div class="agileaboutaits">
+					 	<button class="btn btn-primary" onclick="location.href = '#contact'">
+					 		<span style="font-size:clamp(10px, 2vw, 20px); padding-right: clamp(1rem, 3vw, 4rem); padding-left:clamp(1rem,3vw,4rem); line-height: clamp(0rem, 2vw, 4rem)"> 
+					 			Hire Me
+					 		</span>
+					 	</button> 
 					</div>
 				</div>
 			</div>
+			<div class="clearfix"></div>
 		</div>
 		<!-- //Slider -->
 
-	</div>
+	
 	<!-- //Header -->
 
 
@@ -113,16 +111,26 @@
 
 				<div class="col-md-7 col-sm-7 agileaboutaits-grid agileaboutaits-info">
 					<h1>About Me</h1>
-					<P>I work as a technology analyst at JPMorgan Chase & Co. 
-As an IT grad, I am enthusiastic about using technology for social good and stretching imagination to comprehend and make use of the discoveries in the universe. I have interests in artificial intelligence, game development and tech entrepreneurship and have completed courses, research and work experience in those areas.</P>
+					<P>I work as a Software Engineer at JPMorgan Chase & Co. 
+As an IT grad, I am enthusiastic about using technology to bring ideas to life. I have interests in full-stack web development, machine learning and have completed courses, and worked in those areas.</P>
 					<button class="btn btn-primary">Resume</span></button>  &nbsp;
 					<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">READ MORE<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
 				</div>
-
+				
 				<div class="col-md-5 col-sm-5 agileaboutaits-grid agileaboutaits-image">
-					<div class="agileaboutaits-image-1">
-						<img src="images/about-1.jpg" alt="Couture">
+					<div class="videoWrapper">
+						<iframe width="1280" height="720" src="https://www.youtube.com/embed/AgeL9SpgbLs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						
+						<!-- <iframe width="854" height="480"  style="padding-top:5%" src="https://www.youtube.com/embed/0ZkD2VAEJGg" frameborder="0" allowfullscreen></iframe> -->
 					</div>
+				</div>
+				<!--<div class="col-md-5 col-sm-5 agileaboutaits-grid agileaboutaits-image">
+					 <div class="agileaboutaits-image-1">
+						<img src="images/about-1.jpg" alt="Couture">
+					</div> 
+					
+					
+				</div>-->
 					<div class="clearfix"></div>
 				</div>
 				<div class="clearfix"></div>
@@ -400,14 +408,15 @@ As an IT grad, I am enthusiastic about using technology for social good and stre
 
 	<!-- Portfolio -->
 	<div class="portfolio" id="experience">
-		
 
 		<div class="tabs tabs-style-bar">
 			<nav>
 				<ul>
 					<li><a href="#section-bar-1" class="icon icon-box"><span> </span></a></li>
 				</ul>
+				<div class="clearfix"></div>
 			</nav>
+			<div class="clearfix"></div>
 
 			<div class="content-wrap">
 			<!--<h2 style="text-align: left; font-size: 40px; font-family: 'Montserrat', sans-serif; font-weight: 500; margin-left:8%;">Experience</h2>-->
@@ -796,7 +805,7 @@ As an IT grad, I am enthusiastic about using technology for social good and stre
 	<div class="portfolio" id="portfolio">
 		<h3>Portfolio</h3>
 
-		<div class="tabs tabs-style-bar">
+		<div class="tabs tabs-style-bar w3layouts agileits">
 			<nav>
 				<ul>
 					<li><a href="#section-bar-1" class="icon icon-box"><span>WEB</span></a></li>
@@ -1198,6 +1207,7 @@ As an IT grad, I am enthusiastic about using technology for social good and stre
 							<li><a href="https://twitter.com/Shikhasharma735" target="_blank"><i class="fa fa-twitter"></i></a></li>
 							<li><a href="https://www.youtube.com/channel/UCnFqNQD3zXrKKDS_We2ad5w" target="_blank"><i class="fa fa-youtube"></i></a></li>
 						</ul>-->
+					<div class="clearfix"></div>
 				</div>
 				<!--//Social -->
 				<div class="clearfix"></div>
@@ -1206,7 +1216,7 @@ As an IT grad, I am enthusiastic about using technology for social good and stre
 
 			<!-- Copyright -->
 			<div class="copyright">
-				<p>&copy; 2017 Shikha Sharma<a href="#agilehomewthree" class="to-top scroll" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a></p>
+				<p>&copy; 2021 Shikha Sharma<a href="#webhome" class="to-top scroll" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a></p>
 			</div>
 			<!-- //Copyright -->
 
@@ -1324,6 +1334,52 @@ As an IT grad, I am enthusiastic about using technology for social good and stre
 <!-- End of contact form handling java script -->
 
 <script type="text/javascript">
+
+/* Start of typing effect #nametag code */ 
+document.addEventListener('DOMContentLoaded',function(event){
+  // array with texts to type in typewriter
+  var dataText = [ "I'm a Software Engineer.", "I convert caffeine into code.", "A full-time dreamer!"];
+  
+  // type one text in the typwriter
+  // keeps calling itself until the text is finished
+  function typeWriter(text, i, fnCallback) {
+    // chekc if text isn't finished yet
+    if (i < (text.length)) {
+      // add next character to h1
+     document.getElementById("nametag").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+
+      // wait for a while and call this function again for next character
+      setTimeout(function() {
+        typeWriter(text, i + 1, fnCallback)
+      }, 100);
+    }
+    // text finished, call callback if there is a callback function
+    else if (typeof fnCallback == 'function') {
+      // call callback after timeout
+      setTimeout(fnCallback, 300);
+    }
+  }
+  // start a typewriter animation for a text in the dataText array
+   function StartTextAnimation(i) {
+     if (typeof dataText[i] == 'undefined'){
+        setTimeout(function() {
+          StartTextAnimation(0);
+        }, 500);
+     }
+     // check if dataText[i] exists
+    if (i < dataText[i].length) {
+      // text exists! start typewriter animation
+     typeWriter(dataText[i], 0, function(){
+       // after callback (and whole text has been animated), start next text
+       StartTextAnimation(i + 1);
+     });
+    }
+  }
+  // start the text animation
+  StartTextAnimation(0);
+});
+
+/* End of typing effect #nametag code */
 
 // Get the modal
 var modal1 = document.getElementById('modal1');
