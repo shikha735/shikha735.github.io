@@ -27,8 +27,17 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900" type="text/css" media="all">
 <!-- //Fonts -->
 
-<!-- Supportive-JavaScript -->
-<script src="js/modernizr.js"></script>
+<!-- Supportive-JavaScript 
+<script src="js/modernizr.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script type="text/javascript">
+	// Loader screen
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+</script>
 <!-- //Supportive-JavaScript -->
 
 <link rel="shortcut icon" href="images/favicon.ico">
@@ -46,7 +55,7 @@
 
 <!-- Body -->
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-
+<div class="se-pre-con"></div>
 <div id="md-overlay" onclick="off()"></div><!-- the overlay element for experience modal -->
 
 	<!-- Header -->
@@ -190,13 +199,12 @@
 									    </table>
 									</div>
 
-									<h3>Hobbies</h3><br>
-									I enjoy spending my free time playing the guitar, and cycling.<br><br><br>
-									<h3>I am inspired by</h3><br>
+									<h3>Hobbies</h3>
+									<p align=center>I enjoy spending my free time playing the guitar, and cycling.</p>
+									<!-- <h3>I am inspired by</h3><br>
 									- Gary Vaynerchuk<br>
 									- Ankur Warikoo<br>
-									- PV Sindhu<br><br>
-									<br>
+									- PV Sindhu<br><br>-->
 								</div>
 								<div class="modal-footer">
 									<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
